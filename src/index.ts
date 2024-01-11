@@ -1,6 +1,5 @@
 import katex from "katex";
-import "./index.less";
-
+import './index.less';
 type Node = any; // TODO
 type NodeType = "text" | "span" | "svg" | "anchor" | "line" | "path";
 type RichNode = {
