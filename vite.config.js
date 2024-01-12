@@ -11,9 +11,12 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        exports: "named"
+        exports: 'named',
       }
     }
   },
-  plugins: [dts()]
+  plugins: [dts({
+    entryRoot: './src/index.ts',
+    exclude: './demo/**/*'
+  })]
 })
