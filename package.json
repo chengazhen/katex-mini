@@ -16,6 +16,7 @@
   "author": "azhen",
   "license": "ISC",
   "devDependencies": {
+    "sass": "^1.89.2",
     "typescript": "^4.9.5",
     "vite": "^5.0.11",
     "vite-plugin-dts": "^3.7.0"

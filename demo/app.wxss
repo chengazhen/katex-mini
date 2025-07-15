@@ -1,0 +1,11 @@
+/**app.wxss**/
+@import "./miniprogram_npm/@rojer/katex-mini/index.wxss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
