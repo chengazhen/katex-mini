@@ -1,12 +1,14 @@
+@use "sass:list";
+
 $font-folder: "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/KaTeX/0.15.2/fonts" !default;
 $use-woff2: true !default;
 $use-woff: true !default;
 $use-ttf: true !default;
 
 @function generate-src($family, $family-suffix) {
-  $src: null;
+  $src: ();
   @if $use-woff2 {
-    $src: append(
+    $src: list.append(
       $src,
       url("#{$font-folder}/KaTeX_#{$family}-#{$family-suffix}.woff2")
         format("woff2"),
@@ -14,7 +16,7 @@ $use-ttf: true !default;
     );
   }
   @if $use-woff {
-    $src: append(
+    $src: list.append(
       $src,
       url("#{$font-folder}/KaTeX_#{$family}-#{$family-suffix}.woff")
         format("woff"),
@@ -22,7 +24,7 @@ $use-ttf: true !default;
     );
   }
   @if $use-ttf {
-    $src: append(
+    $src: list.append(
       $src,
       url("#{$font-folder}/KaTeX_#{$family}-#{$family-suffix}.ttf")
         format("truetype"),
