@@ -9,6 +9,6 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    NavBar: typeof import('./../src/components/NavBar.vue')['default']
+    NavBar: typeof import('../src/components/NavBar.vue')['default']
   }
 }

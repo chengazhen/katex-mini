@@ -16,6 +16,7 @@
   "author": "azhen",
   "license": "ISC",
   "devDependencies": {
+    "@types/katex": "^0.16.7",
     "sass": "^1.89.2",
     "typescript": "^4.9.5",
     "vite": "^5.0.11",
