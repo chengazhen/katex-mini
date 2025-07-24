@@ -1430,7 +1430,7 @@ latexAutoRender: `$\begin{cases}a - 3geq0\\\\a + 1\end{cases}$`,
 
   renderLatex: function () {
     try {
-      const nodes = parse(this.data.latex, {
+      const nodes = parse(this.data.latexAutoRender, {
         throwError: true,
         displayMode: true,
       });

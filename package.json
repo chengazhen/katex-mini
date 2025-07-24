@@ -1,5 +1,5 @@
 {
-  "name": "katex-uniapp",
+  "name": "katex-mini",
   "version": "1.0.1",
   "description": "katex for miniprogram",
   "main": "./dist/index.cjs",

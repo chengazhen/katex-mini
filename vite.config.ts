@@ -16,10 +16,10 @@ export default defineConfig({
       output: {
         exports: 'named',
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
-            return assetInfo.name.replace('.css', '.wxss')
+          if (assetInfo.names && assetInfo.names.some(name => name.endsWith('.css'))) {
+            return assetInfo.names.find(name => name.endsWith('.css'))?.replace('.css', '.wxss') || assetInfo.names[0]
           }
-          return assetInfo.name || 'assets/[name].[ext]'
+          return assetInfo.names?.[0] || 'assets/[name].[ext]'
         }
       }
     },
