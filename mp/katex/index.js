@@ -11820,3 +11820,4 @@ export {
   x4 as parseLatex,
   z4 as renderMathInText
 };
+//# sourceMappingURL=index.js.map

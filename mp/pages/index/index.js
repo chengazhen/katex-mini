@@ -1,5 +1,5 @@
 // index.js
-const katexMini = require("../../ketex/index.js");
+const katexMini = require("../../katex/index.js");
 const parse = katexMini.default;
 const renderMathInText = katexMini.renderMathInText;
 
@@ -1389,7 +1389,26 @@ Page({
 \\begin{Bmatrix} 1 & 0 \\\\ 0 & -1 \\end{Bmatrix}\\\\
 \\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix}\\quad
 \\begin{Vmatrix} i & 0 \\\\ 0 & -i \\end{Vmatrix}`,
-    latexAutoRender: `**解题步骤**： - 因为命题\(p\)是假命题，所以它的否定\(\neg p:\forall x\in R,x^{2}+(a - 1)x + 1\geq0\)是真命题。`,
+latexAutoRender: `$\begin{cases}a - 3geq0\\\\a + 1\end{cases}$`,
+//     latexAutoRender: `1. **考点分析**：
+//    本题考查命题的真假判断以及一元二次不等式恒成立问题，涉及到二次函数的性质。
+// 2. **解题步骤**：
+//    - 因为命题$p$是假命题，所以它的否定$\neg p:\forall x\in R,x^{2}+(a - 1)x + 1\geq0$是真命题。
+//    - 对于一元二次函数$y = x^{2}+(a - 1)x + 1$，其二次项系数为$1\gt0$，函数图象开口向上。
+//    - 要使$y\geq0$恒成立，则其判别式$\Delta=(a - 1)^{2}-4\times1\times1\leq0$。
+//    - 展开$(a - 1)^{2}-4$得$a^{2}-2a + 1 - 4\leq0$，即$a^{2}-2a - 3\leq0$。
+//    - 因式分解$a^{2}-2a - 3$得$(a - 3)(a + 1)\leq0$。
+//    - 则有$\begin{cases}a - 3\geq0\\a + 1\leq0\end{cases}$或$\begin{cases}a - 3\leq0\\a + 1\geq0\end{cases}$。
+//    - 解$\begin{cases}a - 3\geq0\\a + 1\leq0\end{cases}$，$a - 3\geq0$得$a\geq3$，$a + 1\leq0$得$a\leq - 1$，无解。
+//    - 解$\begin{cases}a - 3\leq0\\a + 1\geq0\end{cases}$，$a - 3\leq0$得$a\leq3$，$a + 1\geq0$得$a\geq - 1$，所以$-1\leq a\leq3$。
+// 3. **最终答案**：
+//    >(B)
+// 4. **易错提醒**：
+//    - 容易忽略命题$p$为假命题时其否定为真命题这一关键转化。
+//    - 在求解一元二次不等式时，因式分解或求解不等式组可能出现计算错误。
+// 5. **错误原因**：
+//    - 对命题的否定概念理解不深，导致不能正确将命题$p$的真假情况转化为其否定的真假情况。
+//    - 对于一元二次函数与一元二次不等式的关系以及判别式的运用不够熟练，在计算判别式和求解不等式时粗心大意。`,
     latexAutoRenderNodes: [],
   },
 
@@ -1449,6 +1468,11 @@ Page({
             right: "\\end{equation}",
             display: true,
           },
+          {
+            left: "\\begin{cases}",
+            right: "\\end{cases}",
+            display: true,
+          },
           { left: "\\begin{align}", right: "\\end{align}", display: true },
           { left: "\\begin{alignat}", right: "\\end{alignat}", display: true },
           { left: "\\begin{gather}", right: "\\end{gather}", display: true },
@@ -1464,3 +1488,4 @@ Page({
     } catch (error) {}
   },
 });
+

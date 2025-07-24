@@ -1,5 +1,5 @@
 /**app.wxss**/
-@import "./ketex/style.wxss";
+@import "./katex/style.wxss";
 
 .container {
   display: flex;
